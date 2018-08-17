@@ -7,28 +7,30 @@
 <body>
    <header class="main-header">
      <div class="menu-top">
-       <a class="main-header-logo">Техномарт</a>
-       <form class="menu-top__search" action="#">
-            <input id="menu-top__search-box" name="search" type="text">
-            <label for="menu-top__search-box">Поиск:</label>
+       <a class="header-logo">Техномарт</a>
+       <form class="search" action="#">
+            <input id="search-box" name="search" type="text">
+            <label for="search-box">Поиск:</label>
         </form>
-       <div><a class="menu-top-bookmark" href="#">Закладки: 0</a></div>
-       <div><a class="menu-top-cart" href="#">Корзина: 0</a></div>
+       <div><a class="bookmarks" href="#">Закладки: 0</a></div>
+       <div><a class="cart" href="#">Корзина: 0</a></div>
        <div><a class="button-order" href="#">Оформить заказ</a></div>
      </div>
-     <h1>Интернет-магазин<br>
+     <!--Скроем загаловок первого уровня
+     <h1 class="visually-hidden">Интернет-магазин «Техномарт»</h1>
+     -->
+     <p class="title">Интернет-магазин<br>
         строительных материалов<br>
         и инструментов для ремонта
-     </h1>
+     </p>
      <div class="contacts">
        <p class="tel"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
        <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
      </div>
      <a class="button" href="#">Войти</a>
      <a class="button" href="#">Регистрация</a>
-   </header>
 
-    <nav class="main-navigation">
+     <nav class="main-navigation">
       <ul class="site-navigation">
         <li><a href="/">Главная</a></li>
         <li><a href="company.html">Компания</a></li>
@@ -39,6 +41,8 @@
         <li><a href="contacts.html">Контакты</a></li>
       </ul>
     </nav>
+
+   </header>
 <main>
     <section class="catalog-item">
       <div class="materials">
@@ -47,11 +51,11 @@
       </div>
       <div class="tooling">
         <p>Инструмент</p>
-        <a href="#" class="catalog-item-tooling">На все случаи</a>
+        <a href="#">На все случаи</a>
       </div>
       <div class="tech">
         <p>Тезника</p>
-        <a href="#" class="catalog-item-tech">Для стройки</a>
+        <a href="#">Для стройки</a>
       </div>
       <div class="slider">
         <!--Здесь будет слайдер-->
@@ -59,11 +63,11 @@
       </div>
       <div class="discount">
         <p>Скидки</p>
-        <a href="#" class="catalog-item-discount">На 350 товаров</a>
+        <a href="#">На 350 товаров</a>
       </div>
       <div class="delivery">
         <p>Доставка</p>
-        <a href="#" class="catalog-item-delivery">Бесплатно</a>
+        <a href="#">Бесплатно</a>
       </div>
     </section>
 
@@ -102,58 +106,57 @@
           <ins class="price">12 500 P.</ins>
         </li>
       </ul>
-    </section>
 
-    <section class="manufacturers">
       <div class="popular-manufacturers">
         <h2>Популярные производители</h2>
         <a href="#" class="popular-btn">Все производители</a>
       </div>
-    <ul class="item-manufacturers">
-      <li><a href="catalog.html"><img src="img/manufacturer01.jpg" alt="Bosch">Bosch</a></li>
-      <li><a href="catalog.html"><img src="img/manufacturer02.jpg" alt="Makita">Makita</a></li>
-      <li><a href="catalog.html"><img src="img/manufacturer03.jpg" alt="DeWalt">DeWalt</a></li>
-      <li><a href="catalog.html"><img src="img/manufacturer04.jpg" alt="Интерскол">Интерскол</a></li>
-      <li><a href="catalog.html"><img src="img/manufacturer05.jpg" alt="Hitachi">Hitachi</a></li>
-      <li><a href="catalog.html"><img src="img/manufacturer06.jpg" alt="LG">LG</a></li>
-      <li><a href="catalog.html"><img src="img/manufacturer07.jpg" alt="AEG">AEG</a></li>
-      <li><a href="catalog.html"><img src="img/manufacturer08.jpg" alt="Metabo">Metabo</a></li>
+    <ul class="manufacturers-list">
+      <li class="manufacturers-item"><a href="catalog.html"><img src="img/manufacturer01.jpg" alt="Bosch">Bosch</a></li>
+      <li class="manufacturers-item"><a href="catalog.html"><img src="img/manufacturer02.jpg" alt="Makita">Makita</a></li>
+      <li class="manufacturers-item"><a href="catalog.html"><img src="img/manufacturer03.jpg" alt="DeWalt">DeWalt</a></li>
+      <li class="manufacturers-item"><a href="catalog.html"><img src="img/manufacturer04.jpg" alt="Интерскол">Интерскол</a></li>
+      <li class="manufacturers-item"><a href="catalog.html"><img src="img/manufacturer05.jpg" alt="Hitachi">Hitachi</a></li>
+      <li class="manufacturers-item"><a href="catalog.html"><img src="img/manufacturer06.jpg" alt="LG">LG</a></li>
+      <li class="manufacturers-item"><a href="catalog.html"><img src="img/manufacturer07.jpg" alt="AEG">AEG</a></li>
+      <li class="manufacturers-item"><a href="catalog.html"><img src="img/manufacturer08.jpg" alt="Metabo">Metabo</a></li>
     </ul>
     </section>
 
-    <section class="service">
-      <p class="title-service">Сервисы</p>
+    <section class="services">
+      <p class="title-services">Сервисы</p>
       <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
       <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-      <div class="left-column service-list-column">
+      <div class="left-column services-list-column">
         <ul>
-          <li><a href="#" class="service-list-active">Доставка</a></li>
+          <li><a href="#" class="services-list-active">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Кредит</a></li>
         </ul>
       </div>
 
-      <div class="right-column service-details-column">
-        <div class="service-details-block service-details-delivery service-details-active">
-          <h2 class="service-details-title">Доставка</h2>
-          <p class="service-details-info service-delivery-info">Мы с одовольствием доставим ваш товар прямо к вашему подьезду совершенно бесплатно!</p>
-          <p class="service-details-info service-delivery-info">Ведь мы неплохо заработаем поднимая его на ваш этаж.</p>
+      <div class="right-column services-details-column">
+        <div class="services-details-block services-details-delivery services-details-active">
+          <h2 class="services-details-title">Доставка</h2>
+          <p class="services-details-info services-delivery-info">Мы с одовольствием доставим ваш товар прямо к вашему подьезду совершенно бесплатно!</p>
+          <p class="services-details-info services-delivery-info">Ведь мы неплохо заработаем поднимая его на ваш этаж.</p>
         </div>
-        <div class="service-details-block service-details-warrianty">
-          <h2 class="service-details-title">Гарантия</h2>
-          <p class="service-details-info service-warrianty-info">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
-          <p class="service-details-info service-warrianty-info">Дом уж восстановите как-нибудь сами.</p>
+        <div class="services-details-block services-details-warrianty">
+          <h2 class="services-details-title">Гарантия</h2>
+          <p class="services-details-info services-warrianty-info">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
+          <p class="services-details-info services-warrianty-info">Дом уж восстановите как-нибудь сами.</p>
         </div>
-        <div class="service-details-block service-details-credit">
-          <h2 class="service-details-title">Кредит</h2>
-          <p class="service-details-info service-credit-info">Залезть в долговую яму стало проще!</p>
-          <p class="service-details-info service-credit-info">Кредитные консультанты придут вам на помощь.</p>
-          <a href="#" class="service-btn">Отправить заявку</a>
+        <div class="services-details-block services-details-credit">
+          <h2 class="services-details-title">Кредит</h2>
+          <p class="services-details-info services-credit-info">Залезть в долговую яму стало проще!</p>
+          <p class="services-details-info services-credit-info">Кредитные консультанты придут вам на помощь.</p>
+          <a href="#" class="services-btn">Отправить заявку</a>
         </div>
       </div>
     </section>
 
-    <section class="company">
+    <section class="about">
+      <div class="company">
       <h2 class="title-company">Компания «Техномарт»</h2>
       <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкомномть на гастарбайтерах.</p>
       <p>Мы можем доставить товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
@@ -162,17 +165,17 @@
          <li>Автотрейдинг</li>
          <li>ЖелДорЭкспедиция</li>
        </ul>
-    </section>
+      </div>
 
-    <section class="contacts">
+      <div class="contacts">
       <h2 class="title-contacts">Контакты</h2>
       <p>Вы можете забрать товар сами, заехав в наш офис:</p>
       <img src="img/company-contacts-map.jpg" alt="Мы на карте">
       <a href="#" class="company-feedback-btn">Заблудились? Напишите нам!</a>
+      </div>
     </section>
 </main>
-    <footer>
-      <div class="block-footer">
+    <section class="footer-menu">
         <div>
           <a class="footer-logo">Техномарт</a>
         </div>
@@ -191,7 +194,7 @@
               <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
               <p><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
             </div>
-            <div class="menu-footer">
+            <div class="footer-categories">
               <nav>
                 <ul>
                   <li><a href="#">Материалы</a></li>
@@ -201,9 +204,10 @@
                 </ul>
                 </nav>
           </div>
-    </div>
-    <div class="footer-lower">
-      <p class="copyright-company">© 2010–2017 Компания «Техномарт»<br>Все права защищены</p>
+    </section>
+    <footer>
+    <div class="copyright">
+      <p>© 2010–2017 Компания «Техномарт»<br>Все права защищены</p>
     </div>
     <div class="social-buttons">
       <ul>
