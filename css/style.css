@@ -396,7 +396,8 @@ input[type="search"]:hover {
 .slide {
 	display: none;
 	width: 620px;
-	height: 265px
+    height: 265px;
+    margin: -10px 0;
 }
 .slide h2 {
 	font-size: 36px;
@@ -433,7 +434,8 @@ input[type="search"]:hover {
 	background-color: #f7f3ec
 }
 .product {
-	display: flex;
+    display: flex;
+    flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 20px 0
 }
@@ -621,7 +623,7 @@ form h3 {
 .service-navigation input[type="radio"], .sliders input[type="radio"] {
 	display: none
 }
-.service-information label {
+.service-information ul li {
 	display: flex;
 	width: 217px;
 	font-size: 21px;
@@ -658,11 +660,13 @@ form h3 {
 }
 .service-content {
 	position: absolute;
-	display: none;
 	top: 0;
 	right: 0;
 	width: 620px;
 	padding-bottom: 139px
+}
+.service-content.guarant, .service-content.credit {
+    display:none;
 }
 .service-content h2 {
 	font-size: 36px;
@@ -1252,3 +1256,82 @@ form .btn-filter {
 	width: 220px;
 	height: 37px
 }
+/****/
+
+.slide-control.arrow {
+    position: relative;
+}
+
+.slide-control .arrow-left::before {
+    content: "";
+    position: absolute;
+    z-index: 20;
+    left: 22px;
+    top: 123px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    display: block;
+    width: 28px;
+    height: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+.slide-control .arrow-left::after, .slide-control .arrow-right::after, .slide-control .arrow-right::before {
+    content: "";
+    position: absolute;
+    z-index: 20;
+    top: 140px;
+    display: block;
+    width: 28px;
+    height: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+.slide-control .arrow-right::after {
+    top: 123px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.slide-control .arrow-right::after, .slide-control .arrow-right::before {
+    right: 17px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.slide-control .arrow-left::after {
+    left: 22px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.slide-control .arrow-left::after, .slide-control .arrow-right::after, .slide-control .arrow-right::before {
+    content: "";
+    position: absolute;
+    z-index: 20;
+    top: 140px;
+    display: block;
+    width: 28px;
+    height: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+.slide-control .arrow-right::after {
+    top: 123px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.slide-control label.arrow-left {
+    position: absolute;
+    top: 75px;
+    left: -295px;
+}
+.slide-control label.arrow-right {
+    position: absolute;
+    top: 75px;
+    right: -295px;
+}
+.slide-control.arrow label {
+    width: 0;
+    height: 0;
+    background: none;
+    border: none;
+}
+
