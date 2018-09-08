@@ -6,8 +6,8 @@
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header>
@@ -71,20 +71,24 @@
           <div class="sliders">
             <input type="radio" id="btn-1" name="slider" checked>
             <input type="radio" id="btn-2" name="slider">
+            <div class="slide-control arrow">
+                <label class="arrow-left" for="btn-1"></label>
+                <label class="arrow-right" for="btn-2"></label>
+            </div>
             <div class="slide-control">
               <label for="btn-1"></label>
               <label for="btn-2"></label>
             </div>
             <div class="switching">
               <section class="slide">
-                <h2>перфораторы</h2>
+                <h2>Перфораторы</h2>
                 <p>Настоящие мужские игрушки</p>
-                <a href="#" class="btn">Открыть каталог</a>
+                <a href="catalog.html" class="btn">Открыть каталог</a>
               </section>
               <section class="slide">
-                <h2>дрели</h2>
+                <h2>Дрели</h2>
                 <p>Соседям на радость!</p>
-                <a href="#" class="btn">Открыть каталог</a>
+                <a href="catalog.html" class="btn">Открыть каталог</a>
               </section>
             </div>
           </div>
@@ -184,30 +188,29 @@
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными</p>
           <div class="service-information">
             <div class="service-navigation">
-              <input type="radio" id="button-1" name="navigation" checked>
-              <input type="radio" id="button-2" name="navigation">
-              <input type="radio" id="button-3" name="navigation">
-              <label for="button-1">доставка</label>
-              <label for="button-2">гарантия</label>
-              <label for="button-3">кредит</label>
+                <ul>
+                    <li>Доставка</li>
+                    <li>Гарантия</li>
+                    <li>Кредит</li>
+                </ul>
               <div class="slider">
                 <section class="service-content">
                   <h3>доставка</h3>
                   <p class="delivery-slide">Мы с удовольствием доставим ваш товар прямо
                   к вашему подъезду совершенно бесплатно!
-                  Ведь мы неплохо заработаем,</br>
+                  Ведь мы неплохо заработаем,<br>
                   поднимая его на ваш этаж!</p>
                 </section>
-                <section class="service-content">
-                  <h3>гарантия</h3>
+                <section class="service-content guarant">
+                  <h3>Гарантия</h3>
                   <p class="guarantee">Если купленный у нас товар поломается или заискрит,<br>
                   а также в случае пожара, спровоцированного его возгаранием,<br>
                   вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-                  сгоревший товар на новый.</br>
+                  сгоревший товар на новый.<br>
                   Дом уж восстановите как-нибудь сами.</p>
                 </section>
-                <section class="service-content">
-                  <h3>кредит</h3>
+                <section class="service-content credit">
+                  <h3>Кредит</h3>
                   <p class="credit">Залезть в долговую яму стало проще!
                   Кредитные консультанты придут вам на помощь.</p>
                   <a class="btn" href="#">отправить заявку</a>
@@ -295,7 +298,7 @@
             <a class="social-btn social-btn-inst" href="#">инстаграмм</a>
           </p>
           <p class="communication">Обратная связь: <a href="#">mail@htmlacademy.ru</a></p>
-          <p class="footer-copyright">Разработано — <a href="https://htmlacademy.ru">htmlacademy.ru</a></p>
+          <p class="footer-copyright">Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
         </div>
       </div>
     </footer>
