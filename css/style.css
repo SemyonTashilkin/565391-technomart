@@ -1335,3 +1335,8 @@ form .btn-filter {
     border: none;
 }
 
+iframe {
+    width:940px;
+    height:446px;
+    border:0;
+}
