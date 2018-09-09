@@ -451,7 +451,8 @@ article:hover {
 	box-shadow: 0 0 10px #aeb2ba
 }
 .all-category article {
-	margin-bottom: 20px
+	margin-bottom: 20px;
+  margin-right: 20px;
 }
 .small-popup {
 	position: absolute;
@@ -946,7 +947,10 @@ aside {
 .all-category {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between
+	justify-content: flex-start
+}
+article:nth-child(3n) {
+  margin-right: 0
 }
 .filter {
 	display: flex;
